@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+    <%= render "layouts/header" %>
     <title>Secret</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,5 +13,8 @@
 
   <body>
     <%= yield %>
+    <% flash.each do |message_type, message| %>
+      <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <% end %>
   </body>
 </html>

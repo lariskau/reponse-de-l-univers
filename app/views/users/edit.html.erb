@@ -1,0 +1,5 @@
+<%= form_tag "/users/#{@users.id}/edit", method: "patch" do %>
+  <input type="string" name="email" placeholder="Email"><br>
+  <input type="string" name="password" placeholder="Mot de passe"><br>
+  <input type="submit" value="Enregistrer" class="bouton_submit">
+<% end %>
