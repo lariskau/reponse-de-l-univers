@@ -1,24 +1,24 @@
-# README
+# REPONSE DE L'UNIVERS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Cette app est réalisée par Edouard Plantevin et Léa Bougaut pour THP session 5 !
 
-Things you may want to cover:
+Pour voir cette beauté en ligne : https://secret-lea-thp.herokuapp.com/
 
-* Ruby version
+Etape 1:
 
-* System dependencies
+> git clone https://github.com/lariskau/reponse-de-l-univers.git
 
-* Configuration
+Etape 2:
+> cd secret
 
-* Database creation
+Etape 3:
+> rake db:migrate 
 
-* Database initialization
+Etape 4:
+> rails db:seed
 
-* How to run the test suite
+Etape 5:
+> rails s
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Etape 6:
+> aller sur :  http://localhost:3000/
