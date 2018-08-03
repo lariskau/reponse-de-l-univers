@@ -1,5 +1,13 @@
-<%= form_tag "/users/#{@users.id}/edit", method: "patch" do %>
-  <input type="string" name="email" placeholder="Email"><br>
-  <input type="string" name="password" placeholder="Mot de passe"><br>
-  <input type="submit" value="Enregistrer" class="bouton_submit">
+<%= form_for(@user) do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= f.label :password_confirmation, "Confirmation" %>
+  <%= f.password_field :password_confirmation, class: 'form-control' %><br>
+
+  <%= f.submit "éditer ton compte", class: "btn btn-primary" %>
 <% end %>

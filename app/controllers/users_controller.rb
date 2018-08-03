@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   attr_accessor :remember_token
 
+  def index
+    @posts = Post.all
+  end
+
   def show
     @user = User.find(params[:id])
   end
@@ -19,8 +23,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    redirect_to users_path
+  end
+
   def destroy
-    User.find(params[:id]).destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:success] = "Ton compte a été supprimé"
     redirect_to root_path
   end
 

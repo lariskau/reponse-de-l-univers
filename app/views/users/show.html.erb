@@ -1,3 +1,8 @@
 <h1>Salut <%= @user.email %> ici tu peux modifier ton profil 😉!!</h1>
 
- <%= link_to "Supprimer le profil", method: :delete %>
+<td><%= link_to 'Edite ton compte', edit_user_path(params[:id]), class: "btn btn-primary" %></td>
+<br>
+<br>
+<%= form_for @user, method: :delete do |f| %>
+  <%= f.submit "Supprime ton compte", class: "btn btn-primary" %><br/>
+<% end %>
