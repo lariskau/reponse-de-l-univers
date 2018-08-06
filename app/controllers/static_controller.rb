@@ -2,6 +2,8 @@ class StaticController < ApplicationController
   def home
   end
 
-  def secret
+  def club
+    @users = User.all
   end
+
 end

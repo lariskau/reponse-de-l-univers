@@ -1,10 +1,16 @@
 <% provide(:title, 'Sign up') %>
-<h1>Enregistre toi pour découvrir la réponse de l'univers 🌍 💫 !!</h1>
+<h1>Inscris-toi pour faire partie du super club VIP 🚀 😎 ⛵️ 🖥 !!</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@user, url: signup_path) do |f| %>
       <%= render 'shared/error_messages' %>
+
+      <%= f.label "Prénom" %>
+      <%= f.first_name_field :first_name, class: 'form-control' %>
+
+      <%= f.label "Nom" %>
+      <%= f.last_name_field :last_name, class: 'form-control' %>
 
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>

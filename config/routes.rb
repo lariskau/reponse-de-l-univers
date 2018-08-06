@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
   root 'static#home'
 
-  get '/secret', to: 'static#secret'
+  get '/club', to: 'static#club'
 
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'

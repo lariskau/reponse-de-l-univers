@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to "/secret"
+      redirect_to "/club"
     else
       flash.now[:danger] = "Ton login ou ton mot de passe est invalide !"
       render 'new'
